@@ -41,8 +41,8 @@ const reducer = (state = intialState, action) => {
 
 const store = createStore(reducer);
 console.log("Initial State", store.getState());
-const unsubscribe = store.subscribe(() => {
-  console.log("Updated state", store.getState());
-});
+const unsubscribe = store.subscribe(() => 
+  console.log("Updated state", store.getState())
+);
 store.dispatch(updateStreet("456 gate street"));
 unsubscribe();
